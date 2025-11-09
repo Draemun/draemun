@@ -191,7 +191,7 @@ body::before {
     }
     .module-header {
         padding: 0.5rem;
-        font-size: clamp(0.5rem, 3vw, 0.65rem);
+        font-size: clamp(0.7rem, 4vw, 0.9rem);
         letter-spacing: 0px;
         word-wrap: break-word;
         overflow-wrap: break-word;
@@ -658,6 +658,10 @@ body::before {
     background: var(--blood-red);
     color: var(--void-black);
     box-shadow: 0 0 20px var(--blood-red);
+}
+
+.modal-overlay .module-header {
+    display: none;
 }
 
 @media (min-width: 768px) {
