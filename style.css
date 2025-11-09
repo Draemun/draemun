@@ -170,6 +170,7 @@ body::before {
     text-transform: uppercase;
     letter-spacing: 1px;
     position: relative;
+    word-break: break-word;
 }
 
 .module-header::after {
