@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draemun</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="crt-flicker">
+    <div class="matrix-bg" id="matrix">
+    </div>
+
+    <div class="container">
+        <div class="terminal-border">
+            <div class="header-terminal">
+                <div class="terminal-title">NEURAL_INTERFACE.SYS :: DRAEMUN</div>
+            </div>
+            
+            <div class="hero">
+                <div class="glitch-container">
+                    <h1 class="glitch-title">
+                        DRAEMUN
+                    </h1>
+                </div>
+                <div style="color: var(--neon-pink); margin-top: 1rem; font-family: 'Orbitron', monospace;">
+                    [ CHAOS_PROTOCOL INITIATED ]
+                </div>
+            </div>
+
+            <div class="status-bar">
+                <div class="status-item">
+                    <div class="status-dot"></div>
+                    <span>MULTIFANDOM_AND_OC_ARTIST</span>
+                </div>
+                <div class="status-item">
+                    <div class="status-dot" style="background: var(--warning-orange);"></div>
+                    <span>ADULT | DUMBASS_CERTIFIED</span>
+                </div>
+                <div class="status-item">
+                    <div class="status-dot" style="background: var(--neon-pink);"></div>
+                    <span>THEY/THEM | CHAOS_ENTHUSIAST</span>
+                </div>
+            </div>
+
+            <div class="data-grid">
+                <div class="module">
+                    <div class="module-header">SYSTEM_INFO.LOG</div>
+                    <div class="module-content">
+                        <div class="data-line">Professional silly goose & part-time functional adult</div>
+                        <div class="data-line">Software engineering student (somehow surviving)</div>
+                        <div class="data-line">Professional yapper</div>
+                        <div class="data-line">Powered by FuzeTea, spite, and hyperfixations</div>
+                        
+                        <div class="mood-display">
+                            <div style="color: var(--blood-red); font-size: 0.8rem; margin-bottom: 0.5rem;">CURRENT MOOD STATUS:</div>
+                            <div class="mood-text">AAAAAAAAA</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="module">
+                    <div class="module-header">CURRENT_HYPERFIXATIONS.EXE</div>
+                    <div class="module-content">
+                        <div class="data-line">Terraria</div>
+                        <div class="data-line">ULTRAKILL</div>
+                        <div class="data-line">Pokemon</div>
+                        <div class="data-line">Palworld</div>
+                        <div class="data-line">Starset</div>
+                        <div style="margin-top: 1rem; color: var(--neon-yellow); font-style: italic;">
+                            [STATUS] I may be cooked
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="data-grid">
+                <div class="module">
+                    <div class="module-header">ART_PROTOCOLS.DLL</div>
+                    <div class="module-content">
+                        <div class="data-line">Digital artist</div>
+                        <div class="data-line">Mostly OCs (and whatever else my brain feels like cooking)</div>
+                        <div class="data-line">Art trades: Ask, I might consider it when I got time</div>
+                        <div style="margin-top: 1rem; color: var(--warning-orange); font-style: italic;">
+                            [WARNING] I will ramble about my silly lil guys for hours
+                        </div>
+                        <button onclick="toggleCommissions()" class="neural-link">ACCESS COMMISSION_DATA</button>
+                    </div>
+                </div>
+
+                <div class="module">
+                    <div class="module-header">NEURAL_LINKS.NET</div>
+                    <div class="module-content">
+                        <div style="display: grid; grid-template-columns: 1fr; gap: 1rem;">
+                            <a href="https://toyhou.se/Draemun" class="link-node">
+                                <div class="link-title">TOYHOUSE</div>
+                                <div class="link-desc">Character Database</div>
+                            </a>
+                            <a href="https://artfight.net/~Draemun" class="link-node">
+                                <div class="link-title">ARTFIGHT</div>
+                                <div class="link-desc">Combat Protocol</div>
+                            </a>
+                            <a href="https://discordapp.com/users/514314774331523083" class="link-node">
+                                <div class="link-title">DISCORD</div>
+                                <div class="link-desc">Yap Module</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+
+    <div class="modal-overlay" id="commissionsModal">
+        <div class="modal-window">
+            <div class="modal-header">
+                <div class="modal-title">COMMISSION_PROTOCOLS.EXE</div>
+                <button class="close-btn" onclick="closeCommissions()">CLOSE</button>
+            </div>
+            <div class="module">
+                <div class="module-header">COMMISSION_PROTOCOLS.EXE</div>
+                <div class="module-content">
+                    <div style="color: var(--neon-cyan); margin-bottom: 1rem; font-weight: bold;">
+                        ⋗ PAYMENT VIA PAYPAL | READ all terms before commissioning
+                    </div>
+                    
+                    <div class="pricing-grid">
+                        <div class="price-tier">
+                            <div class="tier-header">SKETCHES</div>
+                            <div class="price-item">Full body: <span class="price">$5</span></div>
+                            <div class="price-item">Half body: <span class="price">$3</span></div>
+                            <div class="price-item">Human: <span class="price">$7</span></div>
+                            <div class="tier-note">Can be cleaned up and colored (flats) with no additional fees. </div>
+                        </div>
+                        
+                        <div class="price-tier">
+                            <div class="tier-header">LINED/LINED + MONOCHROME</div>
+                            <div class="price-item">Full body: <span class="price">$10</span></div>
+                            <div class="price-item">Half body: <span class="price">$5</span></div>
+                            <div class="price-item">Human: <span class="price">$13</span></div>
+                        </div>
+                        
+                        <div class="price-tier">
+                            <div class="tier-header">FLATS</div>
+                            <div class="price-item">Full body: <span class="price">$15</span></div>
+                            <div class="price-item">Half body: <span class="price">$10</span></div>
+                            <div class="price-item">Human: <span class="price">$17</span></div>
+                        </div>
+                        
+                        <div class="price-tier">
+                            <div class="tier-header">SHADED</div>
+                            <div class="price-item">Full body: <span class="price">$20</span></div>
+                            <div class="price-item">Half body: <span class="price">$15</span></div>
+                            <div class="price-item">Human: <span class="price">$25</span></div>
+                        </div>
+                    </div>
+                    
+                    <div class="examples-section">
+                        <div class="section-title">ART EXAMPLES</div>
+                        <div class="examples-grid">
+                            <div class="example-item">
+                                <div class="example-type">SKETCH</div>
+                                <img src="sketch.png" alt="Sketch Example" class="example-image" onclick="openImageZoom(this)">
+                            </div>
+                            <div class="example-item">
+                                <div class="example-type">LINED</div>
+                                <img src="lines.png" alt="Lines Example" class="example-image" onclick="openImageZoom(this)">
+                            </div>
+                            <div class="example-item">
+                                <div class="example-type">FLATS</div>
+                                <img src="flats.png" alt="Flats Example" class="example-image" onclick="openImageZoom(this)">
+                            </div>
+                            <div class="example-item">
+                                <div class="example-type">SHADED</div>
+                                <img src="shaded.png" alt="Shaded Example" class="example-image" onclick="openImageZoom(this)">
+                            </div>
+                            <div class="example-item">
+                                <div class="example-type">HUMAN</div>
+                                <img src="human.png" alt="Human Example" class="example-image" onclick="openImageZoom(this)">
+                            </div>
+                        </div>
+                        <div style="text-align: center; margin-top: 1rem; color: var(--neon-yellow); font-style: italic;">
+                            Feel free to ask for other examples
+                        </div>
+                    </div>
+                    
+                    <div class="extras-section">
+                        <div class="section-title">EXTRAS</div>
+                        <div class="data-line">Background: +$5</div>
+                        <div class="data-line">Extra characters: +50% of chosen tier each</div>
+                    </div>
+                    
+                    <div class="will-draw">
+                        <div class="section-title">WILL DRAW</div>
+                        <div class="data-line">Creatures / Dragons</div>
+                        <div class="data-line">Ferals / Anthros</div>
+                        <div class="data-line">Pokemon, Fakemon, Pokemon fusions</div>
+                        <div class="data-line">Character designs based on your details</div>
+                        <div class="data-line">Humans (ask first please)</div>
+                    </div>
+                    
+                    <div class="wont-draw">
+                        <div class="section-title" style="color: var(--blood-red);">WILL NOT DRAW</div>
+                        <div class="data-line" style="color: var(--blood-red);">Adult content (gore included)</div>
+                        <div class="data-line" style="color: var(--blood-red);">Anything against common sense</div>
+                    </div>
+                    
+                    <div class="terms-section">
+                        <div class="section-title">TERMS OF SERVICE</div>
+                        <div class="data-line">Please do not rush me. I'll get your art done as fast as possible!</div>
+                        <div class="data-line">Commission is for personal use only. Cannot be distributed or reproduced</div>
+                        <div class="data-line">Artwork cannot be altered without written consent</div>
+                        <div class="data-line">No refunds unless I'm unable to finish (full refund in that case)</div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="system-footer">
+                <div style="margin-bottom: 1rem;">CONNECTION ESTABLISHED</div>
+                <div style="color: var(--steel-grey); font-size: 0.8rem;">I:S::K:F</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="zoom-overlay" id="imageZoom">
+        <button class="zoom-close" onclick="closeImageZoom()">CLOSE</button>
+        <img class="zoom-image" id="zoomedImage" src="" alt="Zoomed Art">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
