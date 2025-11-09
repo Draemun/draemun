@@ -162,15 +162,16 @@ body::before {
 
 .module-header {
     background: var(--steel-grey);
-    padding: 1rem 1.5rem;
+    padding: 1rem 1rem;
     border-bottom: 1px solid var(--neon-cyan);
     font-family: 'Orbitron', monospace;
     font-weight: 700;
     color: var(--neon-cyan);
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     position: relative;
     word-break: break-word;
+    font-size: 0.8rem;
 }
 
 .module-header::after {
@@ -185,6 +186,11 @@ body::before {
 }
 
 @media (max-width: 480px) {
+    .module-header {
+        padding: 0.75rem 0.5rem;
+        font-size: 0.7rem;
+        letter-spacing: 0px;
+    }
     .module-header::after {
         position: static;
         display: block;
